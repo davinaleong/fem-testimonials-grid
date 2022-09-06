@@ -4,7 +4,7 @@ Another simple challenge from Frontend Mentor.
 
 The challenge can be found [here](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
 
-Demo page coming soon!
+Demo page can be found [here](https://davinaleong.github.io/fem-testimonials-grid/)!
 
 ## Getting Started
 
