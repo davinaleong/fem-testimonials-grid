@@ -193,6 +193,32 @@ a:where(:hover, :focus, :focus-visible) {
   gap: var(--size-500);
 }
 
+.cell-1 {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cell-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 5vw;
+  width: 30vw;
+  height: 30vw;
+  background-image: url(./../images/bg-pattern-quotation.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.cell-1 > * {
+  position: relative;
+  z-index: 1;
+}
+
 .cell-header {
   display: grid;
   grid-template-columns: 2.6em max-content;
