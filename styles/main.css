@@ -92,6 +92,9 @@ body {
   font-weight: var(--fw-regular);
   display: grid;
   grid-template-rows: repeat(2, max-content);
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 /* * {
@@ -187,7 +190,8 @@ a:where(:hover, :focus, :focus-visible) {
 
 /** Content - Layout **/
 .main-grid {
-  width: 100%;
+  max-width: 69.375em;
+  margin-inline: auto;
   height: 100%;
   display: grid;
   gap: var(--size-500);
@@ -204,9 +208,9 @@ a:where(:hover, :focus, :focus-visible) {
   display: block;
   position: absolute;
   top: 0;
-  right: 5vw;
-  width: 30vw;
-  height: 30vw;
+  right: 2em;
+  width: 6.5em;
+  height: 6.5em;
   background-image: url(./../images/bg-pattern-quotation.svg);
   background-position: center;
   background-size: contain;
@@ -241,6 +245,39 @@ a:where(:hover, :focus, :focus-visible) {
 .cell-position {
   grid-column: 2;
   grid-row: 2;
+}
+
+@media (min-width: 72em) {
+  .main-grid {
+    min-height: 35.75em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .cell-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .cell-2 {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .cell-3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .cell-4 {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+  }
+
+  .cell-5 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
 }
 
 /** Content - End **/
