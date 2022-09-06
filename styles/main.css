@@ -193,6 +193,30 @@ a:where(:hover, :focus, :focus-visible) {
   gap: var(--size-500);
 }
 
+.cell-header {
+  display: grid;
+  grid-template-columns: 2.6em max-content;
+  grid-template-rows: 1.3em 1.3em;
+  width: 100%;
+  gap: 0.5em 1em;
+}
+
+.cell-avatar {
+  grid-column: 1;
+  grid-row: 1 / 2;
+  border-radius: 50%;
+}
+
+.cell-author {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.cell-position {
+  grid-column: 2;
+  grid-row: 2;
+}
+
 /** Content - End **/
 
 /** Utility **/
